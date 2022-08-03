@@ -1,0 +1,1 @@
+{"n_input": 32, "n_hidden": 128, "n_classes": 5, "learning_rate": 0.003, "batch_size": 32, "training_iters": 200, "log_period": 1, "sparsity": null, "seed": 0}
