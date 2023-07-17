@@ -173,3 +173,13 @@ class Model:
         save_path = os.path.join(self.model_dir, 'model.ckpt')
         self.saver.save(sess, save_path)
         print("Model saved in file: %s" % save_path)
+
+    def ablation_units(self, sess, mask):
+        if mask is None:
+            return
+
+        for v in self.var_list:
+            v_val = sess.run(v)
+            if 'recurrent_kernel' in v.name:
+                v_val = v_val * mask
+            sess.run(v.assign(v_val))
