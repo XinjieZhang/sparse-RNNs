@@ -1,4 +1,6 @@
 # coding utf-8
+# Before running the code you need to run gesture.py to generate the network
+
 
 import os
 os.environ['TF_CPP_MIN_LOG_LEVEL'] = '2'
